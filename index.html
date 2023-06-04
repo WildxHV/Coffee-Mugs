@@ -15,17 +15,27 @@
 <body>
     <div>
         <nav>
-            <ul>
-                <li class="logo"><a href=""><b>CoffeeStyle.</b></a></li>
-                <li><a class="home" href="#home">HOME</a></li>
-                <li><a href="#products">OUR PRODUCTS</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#STYLEGUIDE">STYLEGUIDE</a></li>
-                <li><a href="#cart"><img class="cartIcon" src="images/iconCart.png" alt="">CART</a><span
-                        id="cartItems">0</span></li>
-            </ul>
+            <div id="logo">
+                <a href=""><b>CoffeeStyle.</b></a>
+            </div>
+
+            <div class="navigations">
+
+                <div id="open-menu">
+                    <a href="#" onclick="toggle()"><img src="images/ham-menu.svg" alt=""></a>
+                </div>
+
+                <ul id="navitems" class="navitems">
+                    <li><a class="home" href="#home">HOME</a></li>
+                    <li><a href="#products">OUR PRODUCTS</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#STYLEGUIDE">STYLEGUIDE</a></li>
+                    <li class="cart-li"><img class="cartIcon" src="images/iconCart.png" alt=""><a
+                            href="#cart">CART</a><span id="cartItems">0</span></li>
+                </ul>
+            </div>
         </nav>
     </div>
     <div class="sec1">
@@ -117,8 +127,8 @@
                 <p>$ 19.00 USD
                 </p>
             </div>
-        <!-- </div> -->
-        <!-- <div class="row"> -->
+            <!-- </div> -->
+            <!-- <div class="row"> -->
             <div class="col">
                 <div class="img">
                     <img src="images/7.jpg" alt="">
@@ -149,8 +159,8 @@
                 <p>$ 34.00 USD
                 </p>
             </div>
-        <!-- </div> -->
-        <!-- <div class="row"> -->
+            <!-- </div> -->
+            <!-- <div class="row"> -->
             <div class="col">
                 <div class="img">
                     <img src="images/10.jpg" alt="">
@@ -196,8 +206,8 @@
                 <img id="magzineImg" src="images/13.jpg" alt="">
             </div>
             <div class="col">
-                <img id="magzineCupImg" src="images/14.jpg" alt="">
-                <img id="magzineCupImg" src="images/15.jpg" alt="">
+                <img id="magzineCupImg1" src="images/14.jpg" alt="">
+                <img id="magzineCupImg2" src="images/15.jpg" alt="">
             </div>
             <div class="col">
                 <p>PREMIUM OFFER</p>
@@ -281,7 +291,7 @@
                     <li class="cpyrt"><a>CoffeeStyle Inc. © 1996</span></li>
                 </ul>
             </div>
-            <div class="col" style="width: 150px;">
+            <div class="col" style="width: 120px;">
                 <ul>
                     <li>
                         <h5>MENU</h5>
@@ -320,6 +330,19 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        function toggle() {
+            var navitem = document.getElementById('navitems')
+            if (navitem.style.display === "none") {
+                navitem.style.display = 'block';
+            }
+            else {
+                navitem.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
